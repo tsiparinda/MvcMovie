@@ -1,10 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using MvcMovie.Data;
+//using MvcMovie.Data.Models;
+//using MvcMovie.Data;
+
 using System;
+using System.Globalization;
 using System.Linq;
 
-namespace MvcMovie.Models
+namespace MvcMovie.Data.Models
 {
     public static class SeedData
     {
@@ -19,7 +22,7 @@ namespace MvcMovie.Models
                 {
                     return;   // DB has been seeded
                 }
-
+                
                 context.Movie.AddRange(
                     new Movie
                     {
